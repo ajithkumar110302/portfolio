@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ajitkumar's Portfolio",
-  description: "Modern & Minimal JS Mastery Portfolio",
+  description: "I am a skilled software engineer specializing in front-end development with extensive experience in React js, TypeScript, javascript, Framer Motion, Next.js, Gatsby and SEO. Based in Bangalore Karnataka India, Ajithkumar's portfolio showcases modern web solutions and innovative designs crafted to enhance user experience and performance.",
 };
 
 export default function RootLayout({
