@@ -1,7 +1,8 @@
 export const navItems = [
   { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Experience", link: "#experience" },
+  // { name: "Projects", link: "#projects" },
+  // { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -173,31 +174,31 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Pixzest Technologies Pvt. Ltd.",
+    role: "Software Engineer",
+    duration: "Feb 2024 - Present",
+    loaction: "Bangalore",
+    desc: [
+      "Developed an admin portal using React for CRUD operations with user authentication using Firebase",
+      "Created a website using Gatsby(SSG) with authentication features using Firebase, tailoring content based on user login status",
+      "Built a website using Gatsby(SSG) that supports content localization for different regions and integrated Contentful to manage localized content, ensuring consistency across languages",
+      "Enhanced SEO performance and UI with Gatsby for dynamic, search-optimized pages"
+    ],
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+    title: "Cloud Counselage Pvt. Ltd.",
+    role: "ReactJs - Intern",
+    duration: "July 2023 - Aug 2023",
+    loaction: "Remote",
+    desc: [
+      "I have created a platform where professionals can discuss, post, search for jobs",
+      "I have learned about project Management, New Product Development, Git and Github"
+    ],
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
-  },
-  {
-    id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
-  },
-  {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
   },
 ];
 

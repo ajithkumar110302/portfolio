@@ -43,6 +43,12 @@ export const FloatingNav = ({
     }
   });
 
+  const scrollToId = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' }); // scroll to the particular card based on user interaction with tab
+    }
+  };
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -74,6 +80,7 @@ export const FloatingNav = ({
         {navItems.map((navItem: any, idx: number) => (
           <Link
             key={`link=${idx}`}
+            // onClick={()=>scrollToId(navItem.link)}
             href={navItem.link}
             className={cn(
               "relative dark:text-neutral-50 items-center  flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
