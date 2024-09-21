@@ -1,3 +1,5 @@
+import { IoCallOutline } from "react-icons/io5";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Experience", link: "#experience" },
@@ -211,7 +213,7 @@ export const socialMedia = [
   {
     id: 2,
     img: "/twit.svg",
-    link: "",
+    link: "tel:8523944792",
   },
   {
     id: 3,
