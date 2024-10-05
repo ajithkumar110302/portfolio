@@ -1,6 +1,8 @@
 import { IoCallOutline } from "react-icons/io5";
+import { MdOutlinePhone } from "react-icons/md";
 
 export const navItems = [
+  { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
   { name: "Experience", link: "#experience" },
   // { name: "Projects", link: "#projects" },
@@ -212,7 +214,7 @@ export const socialMedia = [
   },
   {
     id: 2,
-    img: "/twit.svg",
+    img: "/mobile.svg",
     link: "tel:8523944792",
   },
   {

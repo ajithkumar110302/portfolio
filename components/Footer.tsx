@@ -40,7 +40,7 @@ const Footer = () => {
           Copyright © {currentYear} Ajithkumar
         </p>
 
-        <div className="flex items-center md:gap-3 gap-6">
+        <div className="mt-4 md:mt-0 flex items-center md:gap-3 gap-6">
           {socialMedia.map((info) => (
             <a
               href={info.link}
