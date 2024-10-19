@@ -2,10 +2,10 @@ import { IoCallOutline } from "react-icons/io5";
 import { MdOutlinePhone } from "react-icons/md";
 
 export const navItems = [
-  { name: "Home", link: "#home" },
+  // { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
   { name: "Experience", link: "#experience" },
-  // { name: "Projects", link: "#projects" },
+  { name: "Projects", link: "#projects" },
   // { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
@@ -13,7 +13,7 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title: "Code, create, optimize, and innovate.",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
@@ -77,35 +77,35 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    title: "Promptopia",
+    des: "Promptopia project is a modern and dynamic web application built using Next.js and Tailwind CSS, designed to allow users to share creative writing prompts.",
+    img: "/promptopia.png",
+    iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/js.svg"],
+    link: "https://prompt-ai-sharing.vercel.app/",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    title: "Pixzest",
+    des: "This project delivered a 25-page, fully responsive website with a 90+ SEO score, fast load times, and a modern user experience",
+    img: "/pixzest.png",
+    iconLists: ["/gatsby.svg", "/re.svg", "/js.svg", "/contentful.svg"],
+    link: "https://www.pixzest.com/",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    title: "Frzzr",
+    des: "A scalable website showcasing the company’s products, training programs, and blogs through dynamic pages, utilizing Contentful for content management, Tailwind CSS for responsive design, and deploying on Netlify for seamless updates.",
+    img: "/frzzr.png",
+    iconLists: ["/gatsby.svg", "/re.svg", "/tail.svg", "/js.svg", "/contentful.svg"],
+    link: "https://frzzr.netlify.app/",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    title: "MTI",
+    des: "MTI is a fully responsive website with a 90+ SEO score, fast load times, and a modern user experience.",
+    img: "/mti.png",
+    iconLists: ["/gatsby.svg", "/re.svg", "/js.svg", "/contentful.svg"],
+    link: "https://exquisite-meerkat-2535a2.netlify.app/",
   },
 ];
 
@@ -180,7 +180,7 @@ export const workExperience = [
     id: 1,
     title: "Pixzest Technologies Pvt. Ltd.",
     role: "Software Engineer",
-    duration: "Feb 2024 - Present",
+    duration: "Feb 2024 - Sept 2024",
     loaction: "Bangalore",
     desc: [
       "Developed an admin portal using React for CRUD operations with user authentication using Firebase",
@@ -191,19 +191,19 @@ export const workExperience = [
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
-  {
-    id: 2,
-    title: "Cloud Counselage Pvt. Ltd.",
-    role: "ReactJs - Intern",
-    duration: "July 2023 - Aug 2023",
-    loaction: "Remote",
-    desc: [
-      "I have created a platform where professionals can discuss, post, search for jobs",
-      "I have learned about project Management, New Product Development, Git and Github"
-    ],
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
-  },
+  // {
+  //   id: 2,
+  //   title: "Cloud Counselage Pvt. Ltd.",
+  //   role: "ReactJs - Intern",
+  //   duration: "July 2023 - Aug 2023",
+  //   loaction: "Remote",
+  //   desc: [
+  //     "I have created a platform where professionals can discuss, post, search for jobs",
+  //     "I have learned about project Management, New Product Development, Git and Github"
+  //   ],
+  //   className: "md:col-span-2", // change to md:col-span-2
+  //   thumbnail: "/exp2.svg",
+  // },
 ];
 
 export const socialMedia = [
@@ -220,6 +220,11 @@ export const socialMedia = [
   {
     id: 3,
     img: "/link.svg",
-    link: "https://www.linkedin.com/in/ajithkumar-a-0a356b218/",
+    link: "https://www.linkedin.com/in/ajithkumar-athimoolam/",
+  },
+  {
+    id: 4,
+    img: "/mail.svg",
+    link: "mailto:ajithkumar110302@gmail.com",
   },
 ];

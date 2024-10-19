@@ -51,7 +51,7 @@ export function ContactForm() {
   // const handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => setMessage(e.target.value);
 
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input border border-white/[0.1] z-10"
+    <div className="max-w-md w-full mx-auto rounded-2xl p-4 md:p-8 shadow-input border border-white/[0.1] z-10"
       style={{
         //   add these two
         //   you can generate the color from here https://cssgradient.io/

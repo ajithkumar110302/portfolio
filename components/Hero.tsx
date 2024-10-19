@@ -3,10 +3,11 @@ import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { BlockCard } from "./ui/BlockCard";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36" id="home">
+    <div className="py-10 md:pb-20 md:pt-32" id="home">
       {/**
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight
@@ -59,8 +60,8 @@ const Hero = () => {
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi! I&apos;m Ajithkumar, a Frontend Developer based in Bangalore.
           </p>
-
-          <a href="#about">
+          <BlockCard />
+          <a href="#projects">
             <MagicButton
               title="Show my work"
               type="button"
