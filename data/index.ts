@@ -88,7 +88,7 @@ export const projects = [
     title: "Pixzest",
     des: "This project delivered a 25-page, fully responsive website with a 90+ SEO score, fast load times, and a modern user experience",
     img: "/pixzest.png",
-    iconLists: ["/gatsby.svg", "/re.svg", "/js.svg", "/contentful.svg"],
+    iconLists: ["/gatsby.svg", "/re.svg", "/js.svg", "/graphql.svg", "/contentful.svg"],
     link: "https://www.pixzest.com/",
   },
   {
@@ -96,7 +96,7 @@ export const projects = [
     title: "Frzzr",
     des: "A scalable website showcasing the company’s products, training programs, and blogs through dynamic pages, utilizing Contentful for content management, Tailwind CSS for responsive design, and deploying on Netlify for seamless updates.",
     img: "/frzzr.png",
-    iconLists: ["/gatsby.svg", "/re.svg", "/tail.svg", "/js.svg", "/contentful.svg"],
+    iconLists: ["/gatsby.svg", "/tail.svg", "/graphql.svg", "/js.svg", "/contentful.svg"],
     link: "https://frzzr.netlify.app/",
   },
   {
@@ -104,7 +104,7 @@ export const projects = [
     title: "MTI",
     des: "MTI is a fully responsive website with a 90+ SEO score, fast load times, and a modern user experience.",
     img: "/mti.png",
-    iconLists: ["/gatsby.svg", "/re.svg", "/js.svg", "/contentful.svg"],
+    iconLists: ["/gatsby.svg", "/re.svg", "/js.svg", "/graphql.svg", "/contentful.svg"],
     link: "https://exquisite-meerkat-2535a2.netlify.app/",
   },
 ];
