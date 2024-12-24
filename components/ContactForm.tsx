@@ -1,5 +1,5 @@
 "use client";
-import React, { ChangeEvent, FormEvent, useRef, useState } from "react";
+import React, { FormEvent, useRef, useState } from "react";
 import { Label } from "../components/ui/Label";
 import { Input } from "../components/ui/input";
 import { cn } from "@/lib/utils";
@@ -10,90 +10,97 @@ export function ContactForm() {
   const to = useRef<HTMLInputElement>(null);
   const subject = useRef<HTMLInputElement>(null);
   const message = useRef<HTMLInputElement>(null);
-  const [status, setStatus] = useState<string>('Let get in touch');
+  const [status, setStatus] = useState<string>("Let get in touch");
+  const [errors, setErrors] = useState<{ to?: string; subject?: string; message?: string }>({});
+
+  const validateForm = () => {
+    const newErrors: { to?: string; subject?: string; message?: string } = {};
+
+    if (!to.current?.value) {
+      newErrors.to = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(to.current.value)) {
+      newErrors.to = "Enter a valid email address";
+    }
+
+    if (!subject.current?.value) {
+      newErrors.subject = "Subject is required";
+    }
+
+    if (!message.current?.value) {
+      newErrors.message = "Message is required";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus('sending');
-    console.log(status);
+    if (!validateForm()) return;
+
+    setStatus("sending");
     try {
       const formData = {
         to: to.current?.value,
         subject: subject.current?.value,
         message: message.current?.value,
       };
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
+      const response = await fetch("/api/send-email", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        setStatus('success');
-        // Clear form fields if needed
-        if (to.current) to.current.value = '';
-        if (subject.current) subject.current.value = '';
-        if (message.current) message.current.value = '';
+        setStatus("success");
+        if (to.current) to.current.value = "";
+        if (subject.current) subject.current.value = "";
+        if (message.current) message.current.value = "";
       } else {
         const data = await response.json();
         setStatus(`error: ${data.error}, ${data.details}`);
       }
     } catch (error) {
-      console.log(error);
-      setStatus(`fetch error: ${error instanceof Error ? error.message : String(error)}`);
+      // setStatus(`fetch error: ${error instanceof Error ? error.message : String(error)}`);
+      setStatus("Please retry!")
+    } finally {
+      setStatus("Lets get in touch");
     }
   };
 
-  // const handleToChange = (e: ChangeEvent<HTMLInputElement>) => setTo(e.target.value);
-  // const handleSubjectChange = (e: ChangeEvent<HTMLInputElement>) => setSubject(e.target.value);
-  // const handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => setMessage(e.target.value);
-
   return (
-    <div className="max-w-md w-full mx-auto rounded-2xl p-4 md:p-8 shadow-input border border-white/[0.1] z-10"
+    <div
+      className="max-w-md w-full mx-auto rounded-2xl p-4 md:p-8 shadow-input border border-white/[0.1] z-10"
       style={{
-        //   add these two
-        //   you can generate the color from here https://cssgradient.io/
         background: "rgb(4,7,29)",
-        backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+        backgroundColor: "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
       <form className="my-8" onSubmit={handleSubmit}>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="to">Email</Label>
-          <Input id="to" placeholder="xxx@yyy.zzz" type="email" ref={to}/>
+          <Input id="to" placeholder="xxx@yyy.zzz" type="email" ref={to} />
+          {errors.to && <p className="text-red-500 text-sm">{errors.to}</p>}
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="subject">Subject</Label>
-          <Input id="subject" placeholder="Enter Subject" type="text" ref={subject}/>
+          <Input id="subject" placeholder="Enter Subject" type="text" ref={subject} />
+          {errors.subject && <p className="text-red-500 text-sm">{errors.subject}</p>}
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="message">Message</Label>
-          <Input id="message" placeholder="Enter your Message" type="message" ref={message}/>
+          <Input id="message" placeholder="Enter your Message" type="text" ref={message} />
+          {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
         </LabelInputContainer>
         <div className="flex justify-center items-center">
-          <MagicButton
-            title={status}
-            type="submit"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
+          <MagicButton title={status} type="submit" icon={<FaLocationArrow />} position="right" />
         </div>
       </form>
     </div>
   );
 }
-
-const BottomGradient = () => {
-  return (
-    <>
-      <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
-      <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
-    </>
-  );
-};
 
 const LabelInputContainer = ({
   children,
