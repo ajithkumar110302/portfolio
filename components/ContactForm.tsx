@@ -66,7 +66,8 @@ export function ContactForm() {
       // setStatus(`fetch error: ${error instanceof Error ? error.message : String(error)}`);
       setStatus("Please retry!")
     } finally {
-      setStatus("Lets get in touch");
+      setTimeout(() => { setStatus("Let get in touch"); }, 3000);
+      //setStatus("Lets get in touch");
     }
   };
 
