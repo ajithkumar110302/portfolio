@@ -161,6 +161,31 @@ export const companies = [
 
 export const workExperience = [
   {
+    id: 3,
+    title: "Cadopt Technologies Pvt. Ltd.",
+    role: "Software Developer",
+    duration: "May 2025 - Present",
+    loaction: "Bangalore",
+    desc: [
+      "Developed an admin portal using MERN for CRUD operations with user authentication, authorization, and role-based access control",
+      "Created a PDF watermarking website using MERN with authentication, authorization, role-based access control and email push notification features",
+    ],
+    className: "md:col-span-2",
+    thumbnail: "/exp1.svg",
+  },
+  {
+    id: 2,
+    title: "Freelancer",
+    role: "Software Engineer",
+    duration: "Oct 2024 - Apr 2025",
+    loaction: "Bangalore",
+    desc: [
+      "Developed a school landing page using Next.js and Tailwind CSS with SEO optimization, responsive design, and performance enhancements with email integration using Nodemailer",
+    ],
+    className: "md:col-span-2",
+    thumbnail: "/exp1.svg",
+  },
+  {
     id: 1,
     title: "Pixzest Technologies Pvt. Ltd.",
     role: "Software Engineer",
