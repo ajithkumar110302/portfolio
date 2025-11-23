@@ -58,7 +58,7 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Ajithkumar, a Frontend Developer based in Bangalore.
+            Hi! I&apos;m Ajithkumar, a Software Developer based in Bangalore.
           </p>
           <BlockCard />
           <a href="#projects">
