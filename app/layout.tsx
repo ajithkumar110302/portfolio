@@ -7,13 +7,13 @@ import { ThemeProvider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ajithkumar.pro'),
+  metadataBase: new URL('https://ajithkumar.blog'),
   title: "Ajitkumar's Portfolio",
   description: "I am a skilled software engineer specializing in front-end development with extensive experience in React js, TypeScript, javascript, Framer Motion, Next.js, Gatsby and SEO. Based in Bangalore Karnataka India, Ajithkumar's portfolio showcases modern web solutions and innovative designs crafted to enhance user experience and performance.",
   openGraph: {
     title: "Ajitkumar's Portfolio",
     description: "I am a skilled software engineer specializing in front-end development with extensive experience in React js, TypeScript, javascript, Framer Motion, Next.js, Gatsby and SEO. Based in Bangalore Karnataka India, Ajithkumar's portfolio showcases modern web solutions and innovative designs crafted to enhance user experience and performance.",
-    url: 'https://ajithkumar.pro',
+    url: 'https://ajithkumar.blog',
     siteName: 'Ajithkumar Portfolio',
     images: [
       {
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     "scalable web apps",
     "static site generation",
     "Ajith Kumar portfolio",
-    "ajithkumar.pro",
+    "ajithkumar.blog",
     "React projects",
     "modern web design",
     "web animation",
