@@ -44,6 +44,8 @@ cd portfolio
 
 ```bash
 npm install
+or
+npm i
 ```
 
 3. Set up your environment variables:
